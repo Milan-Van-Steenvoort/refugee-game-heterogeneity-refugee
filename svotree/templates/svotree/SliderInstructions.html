@@ -1,0 +1,59 @@
+{% load otree_tags staticfiles %}
+
+  <H3>  </H3>  
+    <div>
+    <div>
+        <p>
+           In this decision-making task, you have to distribute points in the role of the "sender" between yourself and an unknown other participant in the role of the "receiver". Please indicate the point distribution that you prefer most by moving the slider to the desired position (the total number of points may vary depending on the position of the slider). You will make 15 decisions. The first six are presented on this page and the following nine decisions are displayed on the next page. Below is an example of such a decision.
+        </p>
+    </div>
+
+
+    <div class="panel-body" style="margin-top: 2em; margin-bottom: 2em; border: 1px solid #000000; background: white">
+       <div class="row"">
+           <div class="col-sm-2" align="center"><strong>Example</strong></div>
+           <div class="col-sm-1"></div>
+           <div class="col-sm-7"></div>
+           <div class="col-sm-2"></div>
+       </div>
+       <div class="row">
+           <div class="col-sm-2" align="center">You receive</div>
+           <div class="col-sm-1" align="center"><span class="slider-value">50</span></div>
+           <div class="col-sm-7"><div class="slider-reference"><div class="value-start">30</div><div class="value-end">70</div></div></div>
+           <div class="col-sm-2"></div>
+       </div>
+       <div class="row">
+           <div class="col-sm-2" align="center"></div>
+           <div class="col-sm-1" align="center"></div>
+           <div class="col-sm-7 slider-horizontal-col">
+               <input name="slider" style="background: white" type="range" class="clicked" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="100" data-slider-step="0.1" data-slider-value=50 data-slider-enabled="false" disabled>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-sm-2" align="center">Other receives</div>
+           <div class="col-sm-1" align="center"><span class="slider-value"">40</span></div>
+           <div class="col-sm-7"><div class="slider-reference"><div class="value-start">80</div><div class="value-end">0</div></div></div>
+           <div class="col-sm-2"></div>
+        </div>
+    </div>
+    </div>
+      <p> In this example you would assign yourself 50 points and the other participant 40 points. </p>
+      <p> The other participant completes the same decision-making task as you, also in the role of the sender (where you are in the role of the receiver). You will not know what decisions the other participant makes and vice versa. </p>
+      <p> There are no right or wrong answers - only your personal preference counts. </p>
+      <p> <u> The following applies to the bonus payment: </u> </p>
+      <ul>
+      <li> You and the other participant are randomly assigned the role of sender and the role of receiver. </li>
+      <li> One of the decisions made by the sender will be selected at random. </li>
+      <li> This selected decision and the points distributed in it determine how much money you and the other participant earn. </li>
+      </ul>
+      <p> <u> Decision task 1: </u> </p>
+</div>
+
+
+
+<!--{% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.5.3/bootstrap-slider.min.js"></script>
+    <script>
+    $("#example").slider({});
+    </script>
+{% endblock %} -->

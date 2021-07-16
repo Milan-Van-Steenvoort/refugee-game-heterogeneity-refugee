@@ -1,0 +1,111 @@
+{% extends "global/BaseMotherhood.html" %}
+{% load otree static %}
+
+{% block title %}
+    Typing task - practice 
+{% endblock %}
+
+<!---------------------------------------------------------------------------------------------------------------------------->
+<!--This part displays the information needed for the typing task. 
+    The canvas element (16-24) is a container for graphics, and defines where the text to copy will be defined. 
+    Lines 27-53 defines a table with two rows: In the first row, we have the field for user_text (31)and the next button (36-38). In the second row, the number of correct number-letter sequences is displayed
+     -->
+
+{% block content %}
+
+     <p>
+                <center><h4>Type the text below into the field and click <b> Next </b> <br> or press <b> Enter </b>.<h4></center>
+                <br>
+                <center>
+                    <canvas id="myCanvas" width="350" height="80" style="border:1px solid #f4f5ff;background: #ffffff">
+                            Your browser does not support the HTML5 canvas tag.</canvas>
+                </center>
+                <br><br>
+    </p>
+
+
+    <table class="table">
+            <tr>
+            <h5>
+                <th style="vertical-align:middle">
+                    <br><br>
+                    <input name = "user_text" id = "id_user_text" type="text" onCopy="return false" onPaste="return false" onCut="return false"  autocomplete="off" value = "{{ player.user_text }}" /><br>
+                    <br><br>
+                </th>
+                <th style="vertical-align:middle; text-align: left">
+                    <br><br>
+                    <button id="button_id" class="btn btn-primary btn-large">
+                     Next
+                     </button>
+                    <br><br            
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <h4> Number of correct number-letter sequences: {{round_count}}</h4>
+                </th>
+                <th style="vertical-align:top; text-align: left">
+                <br>
+                </th>   
+            </tr>
+
+
+        </table>
+
+<!---------------------------------------------------------------------------------------------------------------------------->   
+<!--This part will not be needed for the actual experiment, I think, but makes it easier to go through the demo mode for now-->
+<!--This part is only there if played in debug mode-->
+
+ 
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+
+            <h4><br>Cheater Mode Activated (Debug Mode Only)  - <a href="#" id="prefill">Click Here to Autofill Text</a></h4>
+            <p>You are playing in debug mode, so you can skip the manual
+                transcription by clicking <a href="#" id="prefill">this link</a>
+                and clicking "next".
+            </p>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('a#prefill').click(function () {
+                    $('#id_user_text').val('{{ player.correct_text }}');
+                    $('#id_user_text').focus();
+
+                })
+            });
+
+        </script>
+
+
+
+<!---------------------------------------------------------------------------------------------------------------------------->   
+<!--I have no idea what this is about!! Same for lines 69-75-->
+<!--Script indicates that it is Javascript or CSS code-->
+<!--I believe that the second script fills in the canvas defined above (lines 17-25) with the correct text-->
+
+<script>
+    $(document).ready(function () {
+        $('#id_user_text').focus();
+    });
+</script>
+<!-- Text to png Image -->
+<script>
+
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    ctx.font="30px Courier";
+    ctx.fillText('{{ player.correct_text }}',60,50);
+
+    // save img
+    Canvas2Image.saveAsImage(c, 300, 100, 'png');
+</script>
+{% endblock %}
+
+
+{% block script %}
+
+{% endblock %}

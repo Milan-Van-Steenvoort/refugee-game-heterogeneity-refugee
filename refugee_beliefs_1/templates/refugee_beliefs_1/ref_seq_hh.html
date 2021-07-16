@@ -1,0 +1,106 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+	Decision task 2.1
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static "refugee/css/main.css" %}">
+
+      <ul>
+      <li> Citizens from group A earn <strong>75 points</strong> upon completion of the typing task
+      <li> Citizens from group B earn <strong>75 points</strong> upon completion of the typing task
+      </ul>
+
+    <p>
+        Please answer the following questions:
+    </p>
+
+         <p align = "left">
+    What percentage of their common account do you believe that citizens from <strong>group A</strong> will share with you?</p>
+         <div class="rangeslider_07">
+            <table>
+               <col width="20">
+               <col width="700">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="ref_belief_seq_hh_A" type="range" min="0" max="20" id="sliderRange_07" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="ref_belief_seq_hh_A"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div> 
+
+         <p align = "left">
+    What percentage of their common account do you believe that citizens from <strong>group B</strong> will share with you <strong>if citizens from group A gave 0% to 5%</strong> of their common account?"</p>
+         <div class="rangeslider_08">
+            <table>
+               <col width="20">
+               <col width="700">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="ref_belief_seq_hh_B_1" type="range" min="0" max="20" id="sliderRange_08" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="ref_belief_seq_hh_B_1"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div> 
+
+         <p align = "left">
+    What percentage of their common account do you believe that citizens from <strong>group B</strong> will share with you <strong>if citizens from group A gave 6% to 10%</strong> of their common account?</p>
+         <div class="rangeslider_09">
+            <table>
+               <col width="20">
+               <col width="700">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="ref_belief_seq_hh_B_2" type="range" min="0" max="20" id="sliderRange_09" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="ref_belief_seq_hh_B_2"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div> 
+
+         <p align = "left">
+    What percentage of their common account do you believe that citizens from <strong>group B</strong> will share with you <strong>if citizens from group A gave 11% to 15%</strong> of their common account?</p>
+         <div class="rangeslider_10">
+            <table>
+               <col width="20">
+               <col width="700">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="ref_belief_seq_hh_B_3" type="range" min="0" max="20" id="sliderRange_10" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="ref_belief_seq_hh_B_3"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div> 
+
+
+         <p align = "left">
+    What percentage of their common account do you believe that citizens from <strong>group B</strong> will share with you <strong>if citizens from group A gave 16% to 20%</strong> of their common account?</p>
+         <div class="rangeslider_11">
+            <table>
+               <col width="20">
+               <col width="700">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="ref_belief_seq_hh_B_4" type="range" min="0" max="20" id="sliderRange_11" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="ref_belief_seq_hh_B_4"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div> 
+
+       <button id="button_id" disabled class="btn btn-primary btn-large">
+         Next
+   </button>
+    
+{% endblock %}
+
+{% block scripts %}
+
+  <script src="{% static "refugee/js/refugee_beliefs_hh_seq.js" %}"></script>
+
+{% endblock %}

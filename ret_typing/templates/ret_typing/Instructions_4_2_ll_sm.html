@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+Decision task 2 - instructions
+{% endblock %}
+
+{% block content %}
+
+   <p><u><h3>After you have completed the typing task, you will see the following decision screen:</h3></u></p>
+   <div> <font size="4"> 
+      <div align = "center">
+         <img style="border:2px solid black"  src="{% static 'Instruction_3_ll_sm.jpg' %}" style = "max-width:100%; max-height:100%;"/> 
+      </div>
+   <br>
+   <p>Please familiarize yourself with the screen and click "Next" to begin the test questions.</p>
+   </div>  </font> 
+   <button id="button_id" class="btn btn-primary btn-large">
+		Next
+   </button>
+   
+{% endblock %}

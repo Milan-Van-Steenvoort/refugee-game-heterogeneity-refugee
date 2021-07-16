@@ -1,0 +1,65 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static "refugee/css/main.css" %}">
+<body>
+   <div align = "center" style="font-size:20px";>
+      <div class="slidecontainer">
+         <h1>Decision task 2</h1>
+         <div style="text-align: center;">
+            <div style="display: inline-block; text-align: right;">
+            <p align = "center" style="font-size:24px";><strong>Typing task</strong></p>
+            <p>Points scored in the typing task: {{ player.effort_earning}}</p>
+            <p>Your contribution to the common account: {{ player.contribution}}</p>
+            <p>Your private earnings: {{ player.private_earning}}</p>
+            <p align = "center" style="font-size:24px";><strong>Common account</strong></p>
+            <p>Total contribution to the common account: {{ 120}}</p>           
+            <p>Your personal percentage of points: <span id="personal_share_sm_2"></span></p>
+            <p>Share of points of other citizens: <span id="citizen_share_sm_2"></span></p>
+            <p>Share of points for the refugee: <span id="refugee_share_sm_2"></span></p>
+            </div>
+         </div>
+         <ul style="text-align: left;">
+            <strong>
+         <br>
+            <li>The refugee does not take part in the typing task and therefore cannot contribute to the common account.</li>
+            <li>You and the other citizens in your group earned 75 points in the typing task.</li>
+            <li>Citizens in the other group earned 75 points in the typing task.</li>
+            <li>Citizens in the other group make their decisions before you make your decision. Therefore, you are asked to provide the amount that you want to give for different possible levels of giving of the previous group.</li>
+            </strong>
+         </ul>
+         </br>         
+         <p align = "left">
+      Please indicate what percentage of the common account of your group you are willing to give to the refugee <strong> if the first group gave 6% to 10%</strong> of their common account.</p>
+         </br>
+         <div class="rangeslider_2">
+            <table>
+               <col width="20">
+               <col width="500">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="decision_sm_2" type="range" min="0" max="20" id="sliderRange_2" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="decision_sm_2"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div>  
+       <button id="button_id" disabled class="btn btn-primary btn-large">
+       Next
+       </button><br><br>
+      <p align = left><i>To get to the next page you have to click the slider at least once. Then a black point appears <span class="dot"></span>, which can be moved to the desired position. This will enable the button <button disabled class="btn btn-primary btn-large"> Next</button>, which allows you to move on to the next slider.</i></p> 
+      </div>
+   </div>
+   
+   
+{% endblock %}
+
+{% block scripts %}
+
+   <script src="{% static "refugee/js/decision_sm_2.js" %}"></script>
+
+{% endblock %}

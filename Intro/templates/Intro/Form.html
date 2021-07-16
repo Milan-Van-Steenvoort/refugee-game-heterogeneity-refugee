@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Weibliche oder männliche Form
+{% endblock %}
+
+{% block content %}
+<p>Es ist uns wichtig neutrale Geschlechterformulierungen zu verwenden. Allerdings ist dies nicht immer möglich und durch die Verwendung der männlichen UND weiblichen Form würde die Lesbarkeit und damit die Verständlichkeit sehr eingeschränkt werden.</p>
+<p>Bitte entscheiden Sie deshalb, ob die Instruktionen im weiteren Verlauf in weiblicher oder männlicher Form präsentiert werden sollen. </p>
+<p>Bitte beachten Sie, dass sich die Anleitungen in beiden Fällen auf beide Geschlechter beziehen und das sowohl männliche als auch weibliche Personen an diesem Experiment teilnehmen.</p>
+<p>Zum Beispiel: Wenn Sie die weibliche Form wählen, wird Ihnen „Bürgerinnen“ angezeigt, obwohl sowohl weibliche als auch männliche Bürger vorhanden und angesprochen sind. </p>
+<p><strong>{% formfields %}</strong></p>
+<br>
+    <button class="btn btn-primary btn-large"> Weiter </button>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+Decision task 2 - instructions
+{% endblock %}
+
+{% block content %}
+
+
+    <p><u><h4>Both groups have to decide how much should be given to the refugee.</h4></u></p>
+      <ul>
+      <li> The exact decisions that you will have to make are explained below
+      <li> Participants from the other group will make their decisions <strong> at the same time as you</strong>. 
+      </ul>
+   </div>
+
+   <p><u><h4>Your decision:</h4></u></p>
+   <div> 
+      <ul>
+      <li>The amount that you can give to the refugee varies between 0% and 20% of your common account.
+     </li>
+      <li>To do this, you need to move a slider to the position you want. Example:
+     </li>
+      <img src="{% static 'rg_instruction_slider.jpg' %}"/>
+      <li>The slider varies between 0% and 20%, with 20% corresponding to one fifth of the common account of your own group.
+      </li>
+      <li>All members of your group make the same decision. Then, one member of your group is chosen at random, whose decision determines how many points from the common account of your own group are given to the refugee.
+     </li>
+      <li>The remaining points not assigned to the refugee are divided equally between the citizens within your group.
+     </li>
+      <li>Depending on how much is given to the refugee, the amount you receive varies between 20% and 25% of the common account of your own group.
+     </li>
+      </ul>
+      <br>
+      
+
+    <p><u><h4>Decisions of participants from the other group:</h4></u></p>
+      <ul>
+      <li> The amount that they can give to the refugee varies between 0% and 20% of their common account.
+      <li> Each citizen from the other group makes a decision.
+      <li> A citizen is chosen at random, whose decision determines how many points from their common account are given to the refugee.
+      <li> They will make their decisions <strong> at the same time as you</strong>. This means that they do not know what your group decides until after they have made their decision. Likewise, you will not know what their group decides until after you have made your decision. 
+      </ul>
+   </div>
+
+      <div align = "center">
+         <img src="{% static 'Instruction_2_hh_sim.jpg' %}" style = "max-width:70%; max-height:70%;"/>
+      </div>
+
+   <button id="button_id" class="btn btn-primary btn-large">
+      Next
+   </button>
+   
+{% endblock %}

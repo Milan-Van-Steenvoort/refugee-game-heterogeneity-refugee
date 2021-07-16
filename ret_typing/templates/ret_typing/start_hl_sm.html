@@ -1,0 +1,43 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+     Typing task    
+{% endblock %}
+
+{% block content %}
+{% load otree_tags staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h2 class="panel-sub-heading">
+        
+    </h2> 
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'global/matrix.css' %}"/>
+
+    <p>
+		On the next screen you start with the typing task in which you have to enter 5 sequences of numbers and letters and <strong> earn 25 points </strong>.
+    Citizens from the other group have to enter 5 similar sequences of numbers and letters and will  <strong> earn 75 points </strong> per person.
+
+    </p>
+
+    <p>
+		Please click on <button id = "button_id" disabled class = "btn btn-primary btn-large"> Next </button> to start typing.
+
+    </p>
+
+	
+
+
+</div>
+
+       <button id="button_id" class="btn btn-primary btn-large">
+       Next
+       </button>
+	
+
+
+
+
+{% endblock %}

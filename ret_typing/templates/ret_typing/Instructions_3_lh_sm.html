@@ -1,0 +1,63 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+Decision task 2 - instructions
+{% endblock %}
+
+{% block content %}
+
+    <p><u><h4>Both groups have to decide how much should be given to the refugee.</h4></u></p>
+      <ul>
+      <li> The exact decisions that you will have to make are explained below
+      <li> Participants from the other group will make their decisions <strong>before you make your decision</strong>. 
+      </ul>
+   </div>
+
+   <p><u><h4>Decisions of participants from the other group:</h4></u></p>
+   <div> 
+      <ul>
+      <li>The amount that they can give to the refugee varies between 0% and 20% of their common account.
+      <li> Each citizen from the other group makes a decision
+      <li>A citizen is chosen at random, whose decision determines how many points from their common account are given to the refugee.
+    </li>
+      <li>The remaining points not assigned to the refugee are divided equally between the citizens from the other group.
+    </li>
+      <li>Depending on how much is given to the refugee, the amount each citizen receives varies between 20% and 25% of their common account.
+    </li>
+    </div>
+
+    
+
+    <p><u><h4>Your decision:</h4></u></p>
+      <ul>
+     <li> You will make your decisions <strong> after participants from the other group have made their decision</strong>. 
+     <li> Therefore, you will be asked to provide the amount that you want to give for different possible levels of giving of the previous group.
+     <li> The amount that you can give to the refugee varies between 0% and 20% of the common account of your own group.
+     </li> Example: 
+      <img src="{% static 'rg_instruction_slider.jpg' %}"/>
+      <li> You will have to decide what amount of the common account of your own group to give to the refugee:
+      <ul><li>If the other participants from the other group have given  0% to 5% of their common account</li>
+      <li>If the other participants from the other group have given 6% to 10% of their common account</li>
+      <li>If the other participants from the other group have given 11% to 15% of their common account</li>
+      <li>If the other participants from the other group have given 16% to 20% of their common account</li></ul>
+      <li>All members of your group make the same decisions. Then, one member of your group is chosen at random, whose decision determines how many points from the common account of your own group are given to the refugee.
+     </li>
+      <li>The remaining points not assigned to the refugee are divided equally between the citizens within your group.
+     </li>
+      <li>Depending on how much is given to the refugee, the amount you receive varies between 20% and 25% of the common account of your own group.
+     </li>
+
+
+      <div align = "center">
+         <img src="{% static 'Instruction_2_lh_sm.jpg' %}" style = "max-width:70%; max-height:70%;"/>
+      </div>
+
+
+   <button id="button_id" class="btn btn-primary btn-large">
+    Next
+   </button>
+  </div>
+   
+{% endblock %}

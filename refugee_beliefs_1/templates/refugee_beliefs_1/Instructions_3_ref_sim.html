@@ -1,0 +1,48 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+Decision task 2.1 - instructions
+{% endblock %}
+
+{% block content %}
+
+
+    <p><u><h4>Both groups of citizens have to decide how much should be given to the refugee.</h4></u></p>
+      <ul>
+      <li> The exact decisions to be made are similar for both groups, and are explained below
+      <li> Participants from group A and participants from group B are making their decisions <strong>at the same time (simultaneously)</strong>. This means that participants from group A do not know what participants from group B decide until after participants from group A have made their decision. Likewise, participants from group B do not know what participants from group A decide until after participants from group B have made their decision. 
+      </ul>
+   </div>
+
+   <p><u><h4>Each host citizen has to make the following (private and independent) decision:</h4></u></p>
+   <div> 
+      <ul>
+      <li>The amount that a citizen can give to the refugee varies between 0% and 20% of the common account of that citizen's group.
+     </li>
+      <li>To do this, the citizen needs to move a slider to the desired position. Example:
+     </li>
+      <img src="{% static 'rg_instruction_slider.jpg' %}"/>
+      <li>The slider varies between 0% and 20%, with 20% corresponding to one fifth of the common account of that citizen's group.
+      </li>
+      <li>In each group, a citizen is chosen at random, whose decision determines how many points from the common account of that citizen's group are given to the refugee.
+     </li>
+      <li>The remaining points not assigned to the refugee are divided equally between the citizens within their group.
+     </li>
+      <li>Depending on how much is given to the refugee, the amount each citizen receives varies between 20% and 25% of the common account of that citizen's group.
+     </li>
+      </ul>
+      <br>
+      
+
+
+      <div align = "center">
+         <img src="{% static 'Instruction_2_ref_sim.jpg' %}" style = "max-width:70%; max-height:70%;"/>
+      </div>
+
+   <button id="button_id" class="btn btn-primary btn-large">
+      Next
+   </button>
+   
+{% endblock %}

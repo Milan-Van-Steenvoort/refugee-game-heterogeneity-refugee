@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Questionnaire
+{% endblock %}
+
+{% block content %}
+    {{ form.left_right.errors }}
+    
+	<p>In politics, people sometimes talk about "left" and "right". Where would you place yourself on a scale from "extreme left" to "extreme right"?
+</p>
+	<p>
+	<table>
+		<tr>
+		<th>extreme left &nbsp &nbsp</th>
+		<th>{{ form.left_right }}</th> 
+		<th>extreme right</th>
+		</tr>
+    </table>
+	<br>
+	 <button id="button_id" class="btn btn-primary btn-large">
+				 Next
+	 </button>
+    
+{% endblock %}

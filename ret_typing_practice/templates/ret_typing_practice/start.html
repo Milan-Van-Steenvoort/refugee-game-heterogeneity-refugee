@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+     Typing task   
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions well well-lg">
+
+      <link rel="stylesheet" type="text/css"
+          href="{% static 'global/matrix.css' %}"/>
+      <H3> Instructions </H3>
+	  <p><ul>
+	  <li> In the typing task, you must enter the number-letter sequences correctly in the field provided and click on <button class = "btn btn-primary btn-large" disabled> Next </button> or press Enter. </li>
+		<li> You receive points for completing 5 sequences of numbers and letters. </li>
+		<li> Below you can see what the screen looks like: </li>
+	  </ul>	
+      <div align = "center">
+         </p>
+         <img src="{% static 'Typing_task_example.jpg' %}" style = "max-width:70%; max-height:70%; align: center" />
+         <p>
+      </div>
+      <p><ul>
+      <li> You can only continue if you have entered the number-letter sequence correctly. </li>
+      <li> Letters must be entered in the correct case (uppercase/lowercase) </li>
+      <li> Copying or cutting and pasting in the input field is not permitted. </li>  
+      <li> The number of correct number-letter sequences is shown beneath the field. </li>
+         </ul></p>       
+      </p>
+      <p>
+        <H3>Practice</H3>
+         <ul>
+         <li> On the next screen, you can familiarize yourself with the typing task by completing two practice tasks. </li>
+         <li> You will not receive any points for the practice task. </li>
+         <li> Later in the study, you will need to do the actual typing. </li>
+         </ul>
+      <br>
+      <p>Please click on <button class="btn btn-primary btn-large" disabled> Next </button> to begin practicing.
+      </b>  
+      </p>
+   
+	
+
+
+</div>
+
+      <button class="btn btn-primary btn-large"> Next </button><br><br><br>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+{% load otree static %}
+
+{% block title %}
+Overview
+{% endblock %}
+
+{% block content %}
+<body onload="myFunction()">
+	<div style="display:none" id="div2">
+		<p><strong><u>Welcome</u></strong></p>
+		<p> Thank you for your interest in this study. The study is carried out by Milan Van Steenvoort (Maastricht University). </p>
+		<p> Before you begin, please read the following instructions carefully! </p>
+
+		<ul>
+		<li>This study is about decision-making</li>
+		<li>The information you receive during this study is true and not deceptive</li>
+		<li>This study consists of two decision tasks and takes between and minutes</li>
+		<li>The payment you receive for completing this study includes a basic compensation of euros and a bonus remuneration ranging between euros and euros</li>
+		<li> Your final payment amount will only be communicated to you as part of the transfer.The payment will be executed through Prolific. </li>
+		<li>On the next screen, you will see the declaration of consent for this experiment</li>
+		</ul>
+
+		<p> <strong> Warning: </strong> Please do not click on "Back" or "Refresh" in your browser, as this can lead to data loss. We also ask you not to conduct the study with a smartphone or tablet. Thank you for your understanding! </p>
+
+		 
+	<p> Please click "Next" to begin the study. </p>
+
+	<button id="button_id" class="btn btn-primary btn-large"> Next</button>
+	</div>
+		<noscript>
+			<H1> <p> JavaScript is not activated. To participate in this study, JavaScript must be activated. </p> </H1>
+		</noscript>
+</body>
+{% endblock %}
+{% block scripts %}
+
+	<script src="{% static "Intro/js/jscheck.js" %}"></script>
+	
+{% endblock %}

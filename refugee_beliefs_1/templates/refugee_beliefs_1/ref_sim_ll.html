@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+	Decision task 2.1
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static "refugee/css/main.css" %}">
+
+      <ul>
+      <li> Citizens from group A earn <strong>25 points</strong> upon completion of the typing task
+      <li> Citizens from group B earn <strong>25 points</strong> upon completion of the typing task
+      </ul>
+
+    <p>
+        Please answer the following questions:
+    </p>
+
+         <p align = "left">
+    What percentage of their common account do you believe that citizens from group A will share with you?</p>
+         <div class="rangeslider_05">
+            <table>
+               <col width="20">
+               <col width="700">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="ref_belief_sim_ll_A" type="range" min="0" max="20" id="sliderRange_05" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="ref_belief_sim_ll_A"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div> 
+
+         <p align = "left">
+    What percentage of their common account do you believe that citizens from group B will share with you?</p>
+         <div class="rangeslider_06">
+            <table>
+               <col width="20">
+               <col width="700">
+               <col width="20">
+               <tr>
+               <td>0%&nbsp</td>
+               <td><input name="ref_belief_sim_ll_B" type="range" min="0" max="20" id="sliderRange_06" class="notclicked" labels = "20"></td>
+               <td>&nbsp20%</td>
+            </table>
+            <p align = "center"><span id="ref_belief_sim_ll_B"></span>%&nbsp&nbsp&nbsp&nbsp</p>
+         </div> 
+
+       <button id="button_id" disabled class="btn btn-primary btn-large">
+         Next
+   </button>
+    
+{% endblock %}
+
+{% block scripts %}
+
+  <script src="{% static "refugee/js/refugee_beliefs_ll_sim.js" %}"></script>
+
+{% endblock %}

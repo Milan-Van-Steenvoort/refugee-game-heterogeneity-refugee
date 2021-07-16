@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+
+{% block title %}
+Decision task 2 - instructions
+{% endblock %}
+
+{% block content %}
+
+   <p><u><h3>There are two types of players in the decision game</h3></u></p>
+   <div> <font size="4"> 
+      <ul>
+      <li><b>Citizens</b>
+      <ul>
+      <li>Citizens are participants who take part in the typing task where you have to fill in 5 sequences of numbers and letters and earn <strong> 25 or 75 points </strong> (the task you just practiced).
+	  </li>
+      <li>There are 2 types of citizens:</li>
+	  <ul><li>High-earning citizens who earn <strong> 75 points </strong> in the typing task. </li>
+	  <li>Low-earning citizens who earn <strong> 25 points </strong> in the typing task. </li></ul>
+	  <li>40% of the points that are earned in the typing task are withheld and collected in a common account. You can think of these as taxes that citizens have to pay.
+
+	  </li>
+	  <ul><li>High-earning citizens: <strong> 30 points </strong> (40% of 75 points). </li> </ul>
+	  <ul><li>Low-earning citizens: <strong> 10 points </strong> (40% of 25 points). </li> </ul>
+      <li>The remaining 60% are a citizen's personal earnings
+	  </li>
+	  <ul><li>High-earning citizens: <strong> 45 points </strong> (60% of 75 points). </li> </ul>
+	  <ul><li>Low-earning citizens: <strong> 15 points </strong> (60% of 25 points). </li> </ul>
+      </ul>
+      <li><b>Refugee</b>
+      <ul>
+      <li>The refugee (another participant in this study) does not participate in the typing task and therefore cannot contribute to the common account.
+	  </li>
+      <li>The refugee has no own income.
+      </ul>
+      </p>
+   </div>
+
+   <p><u><h3>Each game consists of one refugee and two groups of four host citizens.</h3></u></p>
+      </ul> 
+      <li>Each group consists of 4 citizens.
+      <li>Citizens in a same group receive identical earnings.
+      <li>Whether you are a high-earning or low-earning citizen was decided randomly.
+      <li><strong>You have been assigned to a group of high-earning citizens</strong>.
+      <li>The other group consists of citizens with <strong>low earnings</strong> from the typing task.
+      </ul>
+      </p>
+      <div align = "center">
+         <img src="{% static 'Instruction_1_hl.jpg' %}" style = "max-width:70%; max-height:70%;"/>
+      </div>
+      </font>
+   </div>   
+   <button id="button_id" class="btn btn-primary btn-large">
+		Next
+   </button>
+{% endblock %}
