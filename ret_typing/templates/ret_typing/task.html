@@ -50,27 +50,7 @@
 
         </table>
 
-<!---------------------------------------------------------------------------------------------------------------------------->
 
-        <div class="panel panel-success">
-            <div class="panel-heading">
-
-            <h4><br>Cheater Mode Activated (Debug Mode Only)  - <a href="#" id="prefill">Click Here to Autofill Text</a></h4>
-            <p>You are playing in debug mode, so you can skip the manual
-                transcription by clicking <a href="#" id="prefill">this link</a>
-                and clicking "next".
-            </p>
-            </div>
-        </div>
-        <script>
-            $(document).ready(function () {
-                $('a#prefill').click(function () {
-                    $('#id_user_text').val('{{ player.correct_text }}');
-                    $('#id_user_text').focus();
-
-                })
-            });
-        </script>
 
 <!---------------------------------------------------------------------------------------------------------------------------->
 

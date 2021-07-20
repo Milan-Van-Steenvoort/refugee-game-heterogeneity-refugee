@@ -1,6 +1,6 @@
 from os import environ
 
-DEBUG = 'false'
+DEBUG = False
 SESSION_CONFIGS = [
     dict(
         name='refugee_decision',
@@ -42,3 +42,10 @@ SECRET_KEY = '2133226331992'
 
 # if an app is included in SESSION_CONFIGS, you don't need to list it here
 INSTALLED_APPS = ['otree']
+
+ROOMS = [
+    dict(
+        name='test_room_ref',
+        display_name='Test room',
+    ),
+]
