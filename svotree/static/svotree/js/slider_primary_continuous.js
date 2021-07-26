@@ -3,6 +3,7 @@
 var continuous_final_number = 100;
 
 /* Create each slider and attach the necessary event handlers */
+var confirm_button = document.getElementById("button_id");
 
 var item1_slider = $('#item1').slider({
     formatter: function(value) {
@@ -68,6 +69,8 @@ var item6_slider = $('#item6').slider({
     var value = item6_slider.getValue();
     var proportional_position_on_slider = value / continuous_final_number;
     update_displayed_values('item6', proportional_position_on_slider);
+    confirm_button.disabled = false;
+    confirm_button.innerHTML = "Next";
 }).data('slider');
 
 
@@ -79,3 +82,10 @@ update_displayed_values('item3', item3_slider.getValue() / continuous_final_numb
 update_displayed_values('item4', item4_slider.getValue() / continuous_final_number);
 update_displayed_values('item5', item5_slider.getValue() / continuous_final_number);
 update_displayed_values('item6', item6_slider.getValue() / continuous_final_number);
+
+/* See SVO citizen as to why this is here
+                            <div class="col-sm-2"><button type="button" class="btn btn-primary btn-large" id="item{{ item_number }}_confirm" value="False">Confirm</button></div>
+
+    <button type="button" class="btn btn-primary btn-large" id="continue_button" >Continue</button>
+    <button id="hidden_submit_button" type="submit" hidden="True"></button>
+    */

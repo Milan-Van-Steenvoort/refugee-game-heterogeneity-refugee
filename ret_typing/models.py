@@ -141,7 +141,7 @@ class Player(BasePlayer):
         [1, '1'],
         [2, '2'],
         [3, '3'],
-      ], label='How many groups of citizens are there in total?',
+      ], label='How many groups of citizens are there in the decision task?',
         widget=widgets.RadioSelect)
 
 #number of  citizens _all treatments     
@@ -159,7 +159,7 @@ class Player(BasePlayer):
         [1, '1'],
         [2, '2'],
         [3, '3'],
-      ], label='How many refugees are there?',
+      ], label='How many refugees are there in the decision task?',
         widget=widgets.RadioSelect)
 
 #earnings _high

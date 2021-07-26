@@ -29,13 +29,17 @@ Decision task 1
                             <div class="col-sm-7 slider-horizontal-col">
                                 <input name="slider{{ item_number }}" id="item{{ item_number }}" type="text" data-slider-min="0" data-slider-max="100" data-slider-step="0.1" data-slider-value="50" />
                             </div>
-                            <div class="col-sm-2"><button type="button" class="btn btn-primary btn-large" id="item{{ item_number }}_confirm" value="False">Confirm</button></div>
                         </div>
                         <div class="row">
                             <div class="col-sm-2" align="center">Other receives</div>
                             <div class="col-sm-1" align="center"><span class="slider-value" id="item{{ item_number }}_other"></span></div>
                             <div class="col-sm-7"><div class="slider-reference"><div class="value-start" id="item{{ item_number }}_other_start"></div><div class="value-end" id="item{{ item_number }}_other_end"></div></div></div>
                             <div class="col-sm-2"></div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                         </div>
                      </div>
                 </div>
@@ -44,8 +48,9 @@ Decision task 1
     {% endfor %}
     </div>
 
-    <button type="button" class="btn btn-primary btn-large" id="continue_button" >Continue</button>
-    <button id="hidden_submit_button" type="submit" hidden="True"></button>
+       <button id="button_id" disabled class="btn btn-primary btn-large">
+         Next
+   </button>
 
 {% endblock %}
 
