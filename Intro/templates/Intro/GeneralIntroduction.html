@@ -2,6 +2,36 @@
 {% load otree %}
 {% load otree static %}
 
+{% block scripts %}
+	
+	<script src="{% static "Intro/js/jscheck.js" %}"></script>
+	<script>
+
+        function isMobile() {
+            const toMatch = [
+                /Android/i,
+                /iPhone/i,
+                /iPad/i,
+            ];
+
+            return toMatch.some((toMatchItem) => {
+                return navigator.userAgent.match(toMatchItem);
+            });
+            console.log("match item is", navigator.userAgent.match(toMatchItem))
+        }
+
+        // here is an alternative technique that checks screen resolution
+        // function isMobile() {
+        //     return ((window.innerWidth <= 800) && (window.innerHeight <= 600));
+        // }
+
+        document.getElementById('is_mobile').value = isMobile() ? "True" : "False";
+        console.log("is_mobile is", document.getElementById('is_mobile').value)
+    </script>
+
+	
+{% endblock %}
+
 {% block title %}
 Overview
 {% endblock %}
@@ -15,8 +45,8 @@ Overview
 
 		<ul>
 		<li>This study is about decision-making.</li>
-		<li>The information you receive during this study is true and not deceptive. This means that all the information that you will receive during this study is truthful and no information is intended to mislead you.</li>
-		<li>This study consists of two decision tasks and takes between 15 and 20 minutes.</li>
+		<li>The information you receive during this study is true and not deceptive. This means that all the information given in the study is true and implemented exactly as described. The experiment was ethically approved by the Ethical Review Committee of Inner-City Faculties of Maastricht University.</li>
+		<li>This study consists of two decision tasks and takes between  and  minutes.</li>
 		<li>The payment you receive for completing this study includes a basic compensation of euros and a bonus remuneration ranging between euros and euros.</li>
 		<li> Your final payment amount will only be communicated to you as part of the transfer. The payment will be executed through Prolific.</li>
 		<li>On the next screen, you will see the declaration of consent for this experiment.</li>
@@ -29,13 +59,13 @@ Overview
 
 	<button id="button_id" class="btn btn-primary btn-large"> Next</button>
 	</div>
+
+	<div>
+		<input type="hidden" name="is_mobile" id="is_mobile">
+	</div>
+
 		<noscript>
 			<H1> <p> JavaScript is not activated. To participate in this study, JavaScript must be activated. </p> </H1>
 		</noscript>
 </body>
-{% endblock %}
-{% block scripts %}
-
-	<script src="{% static "Intro/js/jscheck.js" %}"></script>
-	
 {% endblock %}
