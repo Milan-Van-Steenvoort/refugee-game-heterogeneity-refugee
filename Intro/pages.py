@@ -14,6 +14,13 @@ class GeneralIntroduction(Page):
 #-------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------
 
+class SorryNoPhone(Page):
+    def is_displayed(self):
+        return (self.player.is_mobile==1)
+#-------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------
+
 # Here, we define that on the consent rules page, we use the variable 'consent_rules' that we defined in models, which is at the player level
 # We define its position in the html file: {% formfield player.consent_rules %}
 class Consent_rules(Page):
@@ -34,17 +41,10 @@ class Distractions(Page):
 class Form(Page):
 	pass
 
-#-------------------------------------------------------------------------------------------------
-#-------------------------------------------------------------------------------------------------
-#-------------------------------------------------------------------------------------------------
-
-class SorryNoPhone(Page):
-    def is_displayed(self):
-        return self.player.is_mobile 
 
 #-------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------------------------
 
 # This defines the sequence in which our html files, in 'templates', will be displayed
-page_sequence = [GeneralIntroduction, Consent_rules, Distractions]
+page_sequence = [GeneralIntroduction, SorryNoPhone, Consent_rules, Distractions]
