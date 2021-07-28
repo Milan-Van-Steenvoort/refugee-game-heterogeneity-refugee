@@ -134,7 +134,7 @@ class Player(BasePlayer):
         [1, '1'],
         [2, '2'],
         [3, '3'],
-      ], label='How many groups of citizens are there in total?',
+      ], label='How many groups of citizens are there in the decision task?',
         widget=widgets.RadioSelect)
 
 #number of  citizens _all treatments     
@@ -152,7 +152,7 @@ class Player(BasePlayer):
         [1, '1'],
         [2, '2'],
         [3, '3'],
-      ], label='How many refugees are there?',
+      ], label='How many refugees are there in the decision task?',
         widget=widgets.RadioSelect)
       
 
@@ -180,7 +180,7 @@ class Player(BasePlayer):
         [1, 'Before citizens from group B make their decisions'],
         [2, 'After citizens from group B make their decisions'],
         [3, 'At the same time that citizens from group B make their decisions'],
-      ], label='Participants in group A make their decisions',
+      ], label='I can think of participants from group A as making their decisions',
         widget=widgets.RadioSelect)
 
 # timing of the decision seq
@@ -189,7 +189,7 @@ class Player(BasePlayer):
         [1, 'Before citizens from group B make their decisions'],
         [2, 'After citizens from group B make their decisions'],
         [3, 'At the same time that citizens from group B make their decisions'],
-      ], label='Participants in group A make their decisions',
+      ], label='I can think of participants from group A as making their decisions',
         widget=widgets.RadioSelect)
 
 
