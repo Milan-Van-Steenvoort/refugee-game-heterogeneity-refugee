@@ -30,6 +30,11 @@ class test_questions_ref_sim(Page):
     form_model = 'player'
     form_fields = ['t1_number_of_citizens_groups', 't2_number_of_citizens', 't3_number_of_refugees', 't4_helping', 't5_helping_other', 't6_timing_sim']
 
+class SorryTooManyMistakes_sim(Page):
+
+    def is_displayed(self):
+        return (self.player.treatment == 'refugee_simseq') & (self.round_number == 1) & (self.player.total_incorrect_answers > 5) 
+
 class ref_sim_hh(Page):
 
     def is_displayed(self):
@@ -82,6 +87,11 @@ class test_questions_ref_seq(Page):
     form_model = 'player'
     form_fields = ['t1_number_of_citizens_groups', 't2_number_of_citizens', 't3_number_of_refugees', 't4_helping', 't5_helping_other', 't6_timing_seq']
 
+class SorryTooManyMistakes_seq(Page):
+
+    def is_displayed(self):
+        return (self.player.treatment == 'refugee_seqsim') & (self.round_number == 1) & (self.player.total_incorrect_answers > 5) 
+
 class ref_seq_hh(Page):
 
     def is_displayed(self):
@@ -123,6 +133,7 @@ page_sequence = [
         Instructions_3_ref_sim,
         Instructions_4_ref_sim,
         test_questions_ref_sim,
+        SorryTooManyMistakes_sim,
         ref_sim_hh,
         ref_sim_hl_lh,
         ref_sim_ll,
@@ -130,6 +141,7 @@ page_sequence = [
         Instructions_3_ref_seq,
         Instructions_4_ref_seq,
         test_questions_ref_seq,
+        SorryTooManyMistakes_seq,
         ref_seq_hh,
         ref_seq_hl,
         ref_seq_lh,

@@ -126,6 +126,8 @@ class Player(BasePlayer):
     incorrect_attempts6 = models.IntegerField(initial=0)
     incorrect_attempts7 = models.IntegerField(initial=0)
 
+    total_incorrect_answers = models.IntegerField(initial=0)   
+
             # QUESTIONS
 
 #number of groups of citizens _all treatments     
@@ -202,30 +204,35 @@ class Player(BasePlayer):
       print('value is', value)
       if value != 2:
          self.incorrect_attempts1 += 1
+         self.total_incorrect_answers +=1
          return 'Wrong answer. Please try again.'
          
     def t2_number_of_citizens_error_message(self, value):
       print('value is', value)
       if value != 4:
          self.incorrect_attempts2 += 1
+         self.total_incorrect_answers +=1
          return 'Wrong answer. Please try again.'
 
     def t3_number_of_refugees_error_message(self, value):
       print('value is', value)
       if value != 1:
          self.incorrect_attempts3 += 1
+         self.total_incorrect_answers +=1
          return 'Wrong answer. Please try again.'
          
     def t4_helping_error_message(self, value):
       print('value is', value)
       if value != 1:
          self.incorrect_attempts4+= 1
+         self.total_incorrect_answers +=1
          return 'Wrong answer. Please try again.'
 
     def t5_helping_other_error_message(self, value):
       print('value is', value)
       if value != 1:
          self.incorrect_attempts5+= 1
+         self.total_incorrect_answers +=1
          return 'Wrong answer. Please try again.'
 
 
@@ -235,6 +242,7 @@ class Player(BasePlayer):
       print('value is', value)
       if value != 3:
          self.incorrect_attempts6 += 1
+         self.total_incorrect_answers +=1
          return 'Wrong answer. Please try again.'
          
          
@@ -242,6 +250,7 @@ class Player(BasePlayer):
       print('value is', value)
       if value != 1:
          self.incorrect_attempts7 += 1
+         self.total_incorrect_answers +=1
          return 'Wrong answer. Please try again.'
 
 # NOTES
