@@ -54,12 +54,22 @@ class Player(BasePlayer):
 
     is_mobile = models.BooleanField(doc="Automatic check through JS whether gadget is phone or not")
 
+    prolific_id = models.CharField(
+        initial = '',
+        label="Prolific ID:",
+    )
+
 # Error messages
 
     def consent_rules_error_message(self, value):
       print('value is', value)
       if value != 1:
-         return 'Your confirmation is required to proceed.'    
+         return 'Your confirmation is required to proceed.'  
+
+    def prolific_id_error_message(self, value):
+      print('value is', value)
+      if value =='':
+         return 'Your Prolific ID is required to proceed.'   
 
 
 
