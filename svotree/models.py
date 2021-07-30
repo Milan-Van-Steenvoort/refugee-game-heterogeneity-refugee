@@ -61,6 +61,7 @@ class Group(BaseGroup):
 class Player(BasePlayer):
 
     treatment = models.StringField()
+    starting_time = models.LongStringField(doc="Time at which decision task 1 starts")
 
     def set_payoff(self):
         """Calculate payoff, to be implemented later """

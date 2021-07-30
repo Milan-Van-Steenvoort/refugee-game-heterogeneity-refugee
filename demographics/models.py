@@ -46,6 +46,8 @@ class Player(BasePlayer):
         label='Your gender:',
         widget=widgets.RadioSelect)
     
+    ending_time = models.LongStringField(doc="Time at which the ending page is reached")
+
     #equality condition
     
     #belief = models.IntegerField()

@@ -19,6 +19,7 @@ class SliderPrimaryContinuous(Page):
                    'slider4',
                    'slider5',
                    'slider6',
+                   'starting_time',
                 ]
 
     def vars_for_template(self):

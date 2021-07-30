@@ -49,6 +49,8 @@ Decision task 1
     {% endfor %}
     </div>
 
+    <input id="starting_time" name="starting_time" type="hidden" value=""/>
+
            <button id="button_id" disabled class="btn btn-primary btn-large">
          Next
    </button>
@@ -57,6 +59,11 @@ Decision task 1
 {% endblock %}
 
 {% block scripts %}
+
+    <script>
+        let startTime = new Date().getTime();
+        document.getElementById('starting_time').value = startTime
+    </script>
 
     <script src="{% static "svotree/js/slider.js" %}"></script>
     <script src="{% static "svotree/js/slider_primary.js" %}"></script>
