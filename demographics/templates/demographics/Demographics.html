@@ -11,11 +11,11 @@
         Please answer some general questions about yourself.
     </p>
 
-    {{ formfield 'age' }}
-    {{ formfield 'gender' }}
+    {% formfield player.age %}
+    {% formfield player.gender %}
 
      <input id="ending_time" name="ending_time" type="hidden" value=""/>
-     
+
    	 <button id="button_id" class="btn btn-primary btn-large">
 				 Next
 	 </button>
